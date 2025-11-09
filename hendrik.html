@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Hendrik - Back-end Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar-container">
+        <div class="logo">
+            <img src="images/Logo.png" alt="Logo Kelompok Tiga" class="navbar-logo">
+            <a href="akbar.html">Kelompok 12 </a>
+        </div>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="akbar.html">Akbar</a></li> 
+                <li><a href="hendrik.html" class="active">Hendrik</a></li> 
+                <li><a href="irvan.html">Irvan</a></li>
+            </ul>
+        </nav>
+        <button class="hamburger" aria-label="Toggle navigation" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <main id="hero" class="hero-section">
+        <div class="hero-content">
+            <img src="images/4.jpg" alt="Foto Hendrik" class="hero-photo">
+            <h1>Halo, Saya Hendrik H. Arakafagi</h1>
+            <p class="description-text">Back-end Developer | Berfokus pada logika server, basis data, dan memastikan kinerja aplikasi yang cepat dan aman.</p>
+            <div class="social-links">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <a href="#contact" class="cta-button">Hubungi Saya</a>
+        </div>
+    </main>
+
+    <section id="about" class="content-section white-bg">
+        <h2><i class="fas fa-user-circle"></i> Tentang Saya</h2>
+        <div class="about-container">
+            <div class="about-text">
+                <p>Saya adalah mahasiswa Sistem Informasi Universitas Musamus Merauke, Lulusan SMA NEGERI 1 Tanah Merah yang memiliki ketertarikan mendalam pada pengembangan server-side. Saya bersemangat membangun sistem yang kuat, terukur, dan aman untuk mendukung aplikasi web.</p>
+                <p>Keahlian utama saya meliputi bahasa pemrograman seperti Python dan Java, dengan pengalaman menggunakan framework seperti Django dan Spring Boot. Saya juga mahir dalam manajemen basis data SQL (PostgreSQL/MySQL).</p>
+            </div>
+            <div class="about-photo">
+                <img src="images/3.jpg" alt="Foto Hendrik - Tentang Saya">
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="content-section light-bg">
+        <h2><i class="fas fa-briefcase"></i> Pengalaman</h2>
+        <div class="experience-container">
+            <div class="experience-photo">
+                <img src="images/2.jpg" alt="saat pengalaman kerja/proyek">
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <h3>Keahlian di bidang front end developer dan bidang desain ui/ux</h3>
+                    <p class="company"><span class="year">2024</span></p>
+                    <ul>
+                        <li</li>
+                        <li</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <h3>Bidang IT Konsultan </h3>
+                    <p class="company"><span class="year">2023</span></p>
+                    <ul>
+                        <li</li>
+                        <li</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="content-section white-bg">
+        <h2><i class="fas fa-laptop-code"></i> Keahlian</h2>
+        <div class="skills-container">
+            <div class="skills-photo">
+                <img src="images/1.jpg" alt="Foto ilustrasi skill Hendrik">
+            </div>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fab fa-python"></i>
+                    <p>Python / Django</p>
+                    <div class="level-bar"><div style="width: 85%;"></div></div>
+                    <span>Advanced (85%)</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database"></i>
+                    <p>SQL (PostgreSQL)</p>
+                    <div class="level-bar"><div style="width: 80%;"></div></div>
+                    <span>Advanced (80%)</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-java"></i>
+                    <p>Java / Spring Boot</p>
+                    <div class="level-bar"><div style="width: 70%;"></div></div>
+                    <span>Intermediate (70%)</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-git-alt"></i>
+                    <p>Git / GitHub</p>
+                    <div class="level-bar"><div style="width: 75%;"></div></div>
+                    <span>Intermediate (75%)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="content-section light-bg">
+        <h2><i class="fas fa-envelope"></i> Hubungi Saya</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Informasi Kontak</h3>
+                <p><i class="fas fa-phone"></i> Telepon: +62 852-XXXX-XXXX</p>
+                <p><i class="fas fa-at"></i> Email: hendrik@example.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Lokasi: Merauke, Papua, Indonesia</p>
+                <div class="social-links" style="margin-top: 20px;">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <form class="contact-form">
+                <input type="text" placeholder="Nama Anda" required>
+                <input type="email" placeholder="Email Anda" required>
+                <textarea placeholder="Pesan Anda..." required></textarea>
+                <button type="submit" class="cta-button-secondary">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Portofolio Hendrik. Bagian dari Proyek Kelompok Tiga.</p>
+        <div class="footer-links">
+            <a href="#hero">Kembali ke Atas</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('main-nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Irvan - Web Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar-container">
+        <div class="logo">
+            <img src="images/Logo.png" alt="Logo Kelompok Tiga" class="navbar-logo">
+            <a href="irvan.html">Kelompok 12</a>
+        </div>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="akbar.html">Akbar</a></li> 
+                <li><a href="hendrik.html">Hendrik</a></li> 
+                <li><a href="irvan.html" class="active">Irvan</a></li>
+            </ul>
+        </nav>
+        <button class="hamburger" aria-label="Toggle navigation" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <main id="hero" class="hero-section">
+        <div class="hero-content">
+            <img src="images/profil_irvan.jpg" alt="Foto Irvan" class="hero-photo">
+            <h1>Halo, Saya Irvanda Anggun Satria</h1>
+            <p class="description-text">Back-end Developer | Mengkhususkan diri dalam membangun aplikasi sisi server yang kuat dan skalabel.</p>
+            <div class="social-links">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <a href="#contact" class="cta-button">Hubungi Saya</a>
+        </div>
+    </main>
+
+    <section id="about" class="content-section white-bg">
+        <h2><i class="fas fa-user-circle"></i> Tentang Saya</h2>
+        <div class="about-container">
+            <div class="about-text">
+                <p>Saya adalah mahasiswa Sistem Informasi di Universitas Musamus Merauke. Saya memiliki minat kuat pada pengembangan back-end dan manajemen basis data.</p>
+                <p>Keahlian saya mencakup PHP, Node.js, dan MySQL. Saya senang memecahkan masalah kompleks dan bekerja dalam tim untuk mewujudkan ide menjadi produk nyata.</p>
+            </div>
+            <div class="about-photo">
+                 <img src="images/about_irvan.jpg" alt="Foto Irvan - Tentang Saya">
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="content-section light-bg">
+        <h2><i class="fas fa-briefcase"></i> Pengalaman</h2>
+        <div class="experience-container">
+            <div class="experience-photo">
+                 <img src="images/pengalaman_irvan.jpg" alt="Irvan saat mengerjakan proyek">
+                 <img src="images/pengalaman2_irvan.jpg">
+                 
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <h3>Pengembangan Sistem Informasi Perpustakaane</h3>
+                    <p class="company"><span class="year">2025</span></p>
+                    <ul>
+                        <li>Merancang dan mengimplementasikan database sistem menggunakan MySQL.</li>
+        <li>Mengembangkan aplikasi berbasis web dengan PHP untuk manajemen buku dan peminjaman.</li>
+        <li>Bertindak sebagai pemimpin tim untuk 4 anggota, mengelola progres menggunakan Trello.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <h3>Organisasi</h3>
+                    <p class="company"><span class="year">2023 - 2025 </span></p>
+                    <ul>
+                        <li>sekretaris HMJ sistem Informasi</li>
+                        <li>Ketua Himpunan MAhasiswa Sistem InformaSI</li>
+                        <li>sekretaris UKMI AL-KAMIL</li>
+                        <li>Koordinator dapertemen Kaderisasi </li>
+                        <li>Koordinator dapertemen Pers&Media </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="content-section white-bg">
+        <h2><i class="fas fa-laptop-code"></i> Keahlian (Skill)</h2>
+        <div class="skills-container">
+            <div class="skills-photo">
+                 <img src="images/skil_irvan.jpg" alt="Foto ilustrasi skill Irvan">
+            </div>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fab fa-php"></i>
+                    <p>PHP / Laravel</p>
+                    <div class="level-bar"><div style="width: 85%;"></div></div>
+                    <span>Advanced (85%)</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database"></i>
+                    <p>MySQL / SQL</p>
+                    <div class="level-bar"><div style="width: 90%;"></div></div>
+                    <span>Advanced (90%)</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-node-js"></i>
+                    <p>Node.js (Express)</p>
+                    <div class="level-bar"><div style="width: 65%;"></div></div>
+                    <span>Intermediate (65%)</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-server"></i>
+                    <p>API Design (REST)</p>
+                    <div class="level-bar"><div style="width: 70%;"></div></div>
+                    <span>Intermediate (70%)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="content-section light-bg">
+        <h2><i class="fas fa-envelope"></i> Hubungi Saya</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Informasi Kontak</h3>
+                <p><i class="fas fa-phone"></i> Telepon: +62 812-1077-3469</p>
+                <p><i class="fas fa-at"></i> Email: irvandaanggunsatria75@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Lokasi: Merauke, Indonesia</p>
+                <div class="social-links" style="margin-top: 20px;">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <form class="contact-form">
+                <input type="text" placeholder="Nama Anda" required>
+                <input type="email" placeholder="Email Anda" required>
+                <textarea placeholder="Pesan Anda..." required></textarea>
+                <button type="submit" class="cta-button-secondary">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Portofolio Irvan. Bagian dari Proyek Kelompok Tiga.</p>
+        <div class="footer-links">
+            <a href="#hero">Kembali ke Atas</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('main-nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,13 +1,15 @@
 /* --- MODERN RESET & VARS --- */
 :root {
-    --primary-color: #2c7be5; /* Biru Profesional */
+    --primary-color: #2c7be5; /* Biru Profesional (Dominan) */
     --secondary-color: #344767; /* Abu Gelap/Navy */
     --accent-color: #f7b42c; /* Kuning/Gold untuk highlight */
     --text-color: #495057;
-    --light-bg: #f8f9fa; /* Background Section Light */
+    --light-bg: #f8f9fa; /* Background Section Light (Digunakan untuk Hero) */
     --white-color: #ffffff;
+    --border-color: #dee2e6;
+    --card-bg: #ffffff; /* Warna background untuk card (putih) */
     --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.05);
-    --shadow-medium: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 8px 15px rgba(0, 0, 0, 0.1); /* Shadow yang lebih jelas untuk box */
 }
 
 * {
@@ -17,10 +19,11 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif; /* Font Baru */
+    font-family: 'Poppins', sans-serif;
     line-height: 1.7;
     color: var(--text-color);
-    background-color: var(--white-color);
+    /* Warna Background Halaman (DIUBAH) */
+    background-color: #e0e7ed; 
     scroll-behavior: smooth;
 }
 
@@ -40,17 +43,29 @@ h1, h2, h3 {
     justify-content: space-between;
     align-items: center;
     padding: 18px 5%;
-    background-color: var(--white-color);
+    background-color: var(--card-bg); 
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: var(--shadow-light); /* Shadow lembut */
+    box-shadow: var(--shadow-light);
+}
+
+.logo {
+    display: flex; /* Untuk menyusun logo gambar dan teks */
+    align-items: center; /* Meratakan secara vertikal */
 }
 
 .logo a {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--primary-color);
+}
+
+/* Styling untuk logo gambar di Navbar (BARU) */
+.navbar-logo {
+    height: 60px; 
+    margin-right: 10px; 
+    vertical-align: middle; 
 }
 
 #main-nav ul {
@@ -74,12 +89,12 @@ h1, h2, h3 {
     font-weight: 600;
 }
 
-.hamburger { /* ... styling sama ... */ display: none; background: none; border: none; color: var(--secondary-color); font-size: 1.8rem; cursor: pointer; }
+.hamburger { display: none; background: none; border: none; color: var(--secondary-color); font-size: 1.8rem; cursor: pointer; }
 
 
 /* --- HERO SECTION STYLING --- */
 .hero-section {
-    background: var(--light-bg);
+    background: var(--light-bg); 
     padding: 100px 5%;
     text-align: center;
     min-height: 80vh;
@@ -87,6 +102,11 @@ h1, h2, h3 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: var(--shadow-medium);
+    margin-bottom: 40px; 
 }
 
 .hero-photo {
@@ -96,7 +116,7 @@ h1, h2, h3 {
     object-fit: cover;
     margin-bottom: 20px;
     border: 6px solid var(--white-color);
-    box-shadow: var(--shadow-medium); /* Shadow profesional */
+    box-shadow: var(--shadow-medium);
 }
 
 .greeting {
@@ -141,7 +161,7 @@ h1, h2, h3 {
     border-radius: 50px;
     margin-top: 30px;
     font-weight: 600;
-    box-shadow: 0 8px 15px rgba(44, 123, 229, 0.3); /* Shadow CTA */
+    box-shadow: 0 8px 15px rgba(44, 123, 229, 0.3);
     transition: background-color 0.3s, box-shadow 0.3s;
 }
 
@@ -152,8 +172,38 @@ h1, h2, h3 {
 
 /* --- CONTENT SECTIONS --- */
 .content-section {
-    padding: 80px 5%;
+    padding: 40px 5%; 
     text-align: center;
+}
+
+/* Kontainer untuk setiap bagian (UNTUK BOX/CARD) */
+.about-container,
+.experience-container,
+.skills-container,
+.contact-grid {
+    background-color: var(--card-bg);
+    padding: 40px; 
+    border-radius: 10px;
+    box-shadow: var(--shadow-light);
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    max-width: 1000px; 
+    margin-left: auto;
+    margin-right: auto;
+    display: flex; 
+    align-items: flex-start; 
+    gap: 2.5rem; 
+    text-align: left; 
+}
+
+.about-text {
+    flex: 1; 
+    min-width: 300px; 
+    font-size: 1rem;
+    padding: 0;
+    border-left: none;
+    box-shadow: none;
+    border-radius: 0;
 }
 
 .content-section h2 {
@@ -161,6 +211,7 @@ h1, h2, h3 {
     margin-bottom: 50px;
     position: relative;
     display: inline-block;
+    color: var(--primary-color); 
 }
 
 .content-section h2::after {
@@ -171,29 +222,33 @@ h1, h2, h3 {
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background-color: var(--primary-color);
+    background-color: var(--accent-color); 
     border-radius: 1.5px;
 }
 
-.white-bg { background-color: var(--white-color); }
-.light-bg { background-color: var(--light-bg); }
-
-/* --- ABOUT STYLING --- */
-.about-container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-    font-size: 1rem;
-    padding: 20px;
-    border-left: 5px solid var(--accent-color);
-    box-shadow: var(--shadow-light);
-    border-radius: 8px;
+/* --- STYLE FOTO GLOBAL (Disesuaikan agar tidak terlalu besar) --- */
+.about-photo,
+.experience-photo,
+.skills-photo {
+    flex: 1; 
+    min-width: 300px; 
 }
 
+.about-photo img,
+.experience-photo img,
+.skills-photo img {
+    width: 100%; 
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow-medium);
+}
+
+
 /* --- EXPERIENCE (TIMELINE) STYLING --- */
+
 .timeline {
-    max-width: 800px;
-    margin: 0 auto;
+    flex: 1; 
+    margin: 0;
     text-align: left;
     position: relative;
 }
@@ -205,7 +260,7 @@ h1, h2, h3 {
     left: 20px;
     width: 2px;
     height: 100%;
-    background: var(--border-color);
+    background: var(--primary-color); 
 }
 
 .timeline-item {
@@ -222,8 +277,8 @@ h1, h2, h3 {
     height: 12px;
     border-radius: 50%;
     background-color: var(--primary-color);
-    border: 3px solid var(--white-color);
-    box-shadow: 0 0 0 4px var(--light-bg); /* Efek cincin */
+    border: 3px solid var(--card-bg); 
+    box-shadow: 0 0 0 4px var(--light-bg); 
 }
 
 .timeline-item h3 {
@@ -252,7 +307,7 @@ h1, h2, h3 {
     font-size: 0.9rem;
 }
 .timeline-item ul li::before {
-    content: '\2022'; /* Bullet point Unicode */
+    content: '\2022';
     color: var(--accent-color);
     font-weight: bold;
     display: inline-block;
@@ -261,12 +316,13 @@ h1, h2, h3 {
 }
 
 /* --- SKILL STYLING --- */
+
 .skills-grid {
+    flex: 1; 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
+    margin: 0;
 }
 
 .skill-item {
@@ -276,6 +332,7 @@ h1, h2, h3 {
     border: 1px solid var(--border-color);
     transition: all 0.3s;
     text-align: left;
+    background-color: var(--white-color);
 }
 
 .skill-item:hover {
@@ -317,18 +374,11 @@ h1, h2, h3 {
 }
 
 /* --- CONTACT STYLING --- */
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 50px;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: left;
-}
 
 .contact-info {
+    flex: 1; 
     padding: 20px;
-    background-color: var(--white-color);
+    background-color: var(--light-bg); 
     border-radius: 8px;
     box-shadow: var(--shadow-light);
 }
@@ -347,6 +397,12 @@ h1, h2, h3 {
 .contact-info i {
     margin-right: 15px;
     color: var(--primary-color);
+}
+
+.contact-form {
+    flex: 2; 
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .contact-form input,
@@ -382,6 +438,7 @@ h1, h2, h3 {
     padding: 25px 5%;
     font-size: 0.9rem;
     border-top: 3px solid var(--primary-color);
+    margin-top: 40px; 
 }
 
 .footer-links a {
@@ -392,16 +449,20 @@ h1, h2, h3 {
 /* --- MEDIA QUERIES --- */
 @media (max-width: 992px) {
     .contact-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; 
+        flex-direction: column; 
     }
     .contact-info {
         text-align: center;
     }
+    .about-container,
+    .experience-container,
+    .skills-container {
+        flex-direction: column; 
+    }
 }
 
 @media (max-width: 768px) {
-    /* Navbar Responsif */
-    /* ... (styling sama seperti sebelumnya untuk hamburger menu) ... */
 
     .hero-content h1 {
         font-size: 2.5rem;
@@ -417,6 +478,18 @@ h1, h2, h3 {
     }
     .timeline-dot {
         left: 0px;
-        box-shadow: 0 0 0 4px var(--light-bg);
-    }
+        border: 3px solid var(--card-bg);
+        box-shadow: 0 0 0 4px #e0e7ed; 
+    }
+
+    .about-container {
+        flex-direction: column-reverse; 
+    }
+    .about-container,
+    .experience-container,
+    .skills-container,
+    .contact-grid {
+        padding: 25px; 
+        gap: 1.5rem; 
+    }
 }

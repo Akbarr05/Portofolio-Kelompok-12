@@ -22,7 +22,7 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.7;
     color: var(--text-color);
-    /* Warna Background Halaman (DIUBAH) */
+    /* Warna Background Halaman */
     background-color: #e0e7ed; 
     scroll-behavior: smooth;
 }
@@ -61,9 +61,9 @@ h1, h2, h3 {
     color: var(--primary-color);
 }
 
-/* Styling untuk logo gambar di Navbar (BARU) */
+/* Styling untuk logo gambar di Navbar */
 .navbar-logo {
-    height: 60px; 
+    height: 35px; /* Atur tinggi logo */
     margin-right: 10px; 
     vertical-align: middle; 
 }
@@ -89,7 +89,16 @@ h1, h2, h3 {
     font-weight: 600;
 }
 
-.hamburger { display: none; background: none; border: none; color: var(--secondary-color); font-size: 1.8rem; cursor: pointer; }
+/* Default: Sembunyikan hamburger di layar besar */
+.hamburger { 
+    display: none; 
+    background: none; 
+    border: none; 
+    color: var(--secondary-color); 
+    font-size: 1.8rem; 
+    cursor: pointer;
+    z-index: 1001;
+}
 
 
 /* --- HERO SECTION STYLING --- */
@@ -446,7 +455,7 @@ h1, h2, h3 {
     margin: 0 10px;
 }
 
-/* --- MEDIA QUERIES --- */
+/* --- MEDIA QUERIES (Untuk Responsif dan Hamburger Menu) --- */
 @media (max-width: 992px) {
     .contact-grid {
         grid-template-columns: 1fr; 
@@ -463,6 +472,40 @@ h1, h2, h3 {
 }
 
 @media (max-width: 768px) {
+
+    /* TAMPILKAN HAMBURGER DAN SEMBUNYIKAN MENU BIASA */
+    .hamburger { 
+        display: block; /* Tampilkan tombol hamburger di layar kecil */
+    }
+
+    #main-nav {
+        /* Default: Sembunyikan menu di layar kecil */
+        position: absolute;
+        top: 100%; /* Turunkan di bawah navbar */
+        left: 0;
+        width: 100%;
+        background-color: var(--card-bg);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        display: none; /* Sembunyikan menu secara default */
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    /* Tampilkan menu ketika class 'active' ditambahkan oleh JavaScript */
+    #main-nav.active {
+        display: block; 
+    }
+
+    #main-nav ul {
+        flex-direction: column; /* Ubah menu dari horizontal menjadi vertikal */
+    }
+
+    #main-nav ul li a {
+        display: block;
+        margin: 10px auto;
+        padding: 10px 20px;
+        width: 80%; /* Berikan lebar agar mudah disentuh */
+    }
 
     .hero-content h1 {
         font-size: 2.5rem;
